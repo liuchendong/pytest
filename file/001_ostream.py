@@ -3,7 +3,10 @@ class Ostream(object):
     print("init........")
   def __lshift__(self, thing):
     print("<<--", thing)
+  def __rshift__(self, thing):
+    print("-->>", thing)
 
 o = Ostream()
 o << "this is a new test"
+o >> 123456
 
